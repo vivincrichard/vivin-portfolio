@@ -27,7 +27,7 @@ const Navbar = () => {
             <a
               key={index}
               href={nav.href}
-              className="font-bold text-lg text-white hover:text-blue-500 transition-colors"
+              className="font-bold text-lg text-black hover:text-blue-500 transition-colors"
             >
               {nav.name}
             </a>
@@ -38,16 +38,16 @@ const Navbar = () => {
           className="md:hidden"
           onClick={() => setIsMenuOpen((res) => !res)}
         >
-          {isMenuOpen ? <X className="text-white" /> : <Menu />}
+          {isMenuOpen ? <X className="text-black" /> : <Menu />}
         </button>
       </nav>
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-gray-700">
+        <div className="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6">
           {navItems.map((nav, index) => (
             <a
               key={index}
               href={nav.href}
-              className="text-2xl font-semibold text-white hover:text-cyan-300 transition-colors"
+              className="text-2xl font-semibold text-black hover:text-cyan-300 transition-colors"
               onClick={() => setIsMenuOpen(false)} // close menu after click
             >
               {nav.name}
