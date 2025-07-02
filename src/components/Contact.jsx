@@ -53,9 +53,8 @@ export const Contact = () => {
           toast.success("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" });
         },
-        (error) => {
+        () => {
           toast.error("Failed to send message");
-          console.error("EmailJS error:", error);
         }
       );
   };
@@ -181,7 +180,7 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition font-semibold"
+              className="w-full cursor-pointer bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition font-semibold"
             >
               Send
             </button>
