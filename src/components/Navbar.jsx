@@ -16,8 +16,12 @@ const Navbar = () => {
       <nav className="fixed w-full z-50 h-20 flex items-center justify-around">
         {/* Logo/Title */}
         <div>
-          <a className="text-2xl md:text-4xl font-extrabold bg-gradient-to-l from-blue-800 via-red-400 to-cyan-400 bg-clip-text text-transparent" href={"#home"}>
-            Vivin's Portfolio
+          <a
+            className="text-2xl md:text-4xl font-extrabold"
+            href={"#home"}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Vivin's <span className="text-blue-600">Portfolio</span>
           </a>
         </div>
 
@@ -42,7 +46,7 @@ const Navbar = () => {
         </button>
       </nav>
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6">
+        <div className="md:hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-blue-200">
           {navItems.map((nav, index) => (
             <a
               key={index}
